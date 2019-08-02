@@ -1,6 +1,6 @@
 # Prob-PIT
 
-This repository explains a TensorFlow implimentation of the probabilistic permutation invariant training (Prob-PIT) which improves and extends the conventional PIT for DNN-based speech separation systems. To underestand the details of the Prob-PIT refer to the following paper:
+This repository explains a TensorFlow implementation of the probabilistic permutation invariant training (Prob-PIT) which improves and extends the conventional PIT for DNN-based speech separation systems. The details of the Prob-PIT technique are presented in the following paper:
 
 Yousefi M., Khorram S., Hansen J., "Probabilistic Permutation Invariant Training for Speech Separation", Interspeech, 2019.
 
@@ -21,7 +21,7 @@ min_cost = idx * cost2 + (1 - idx) * cost1
 pit_loss = tf.reduce_sum(min_cost)
 ```
 
-In this code snippet, cost1 and cost2 are the costs of two possible permutations. (For S sources, we will have S! permutions and therefore we need to calculate S! costs).
+In this code snippet, cost1 and cost2 are the costs of two possible permutations. (For S sources, we will have S! permutations and therefore we need to calculate S! costs).
 
 # Prob-PIT
 
