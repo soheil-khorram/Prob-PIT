@@ -12,7 +12,7 @@ Let's first explain the standard PIT loss function. Assume we are solving a two-
 import tensorflow as tf
 
 def calc_pow(x):
-    return tf.reduce_sum(tf.pow(self._cleaned1-self._labels1, 2), 1)
+    return tf.reduce_sum(tf.pow(x, 2), 1)
 
 cost1 = tf.reduce_mean(calc_pow(x_out1 - x_trg1) + calc_pow(x_out2 - x_trg2), 1)
 cost2 = tf.reduce_mean(calc_pow(x_out1 - x_trg2) + calc_pow(x_out2 - x_trg1), 1)
@@ -43,7 +43,7 @@ Which is completely equivalent to the previous definition of the soft-min functi
 import tensorflow as tf
 
 def calc_pow(x):
-    return tf.reduce_sum(tf.pow(self._cleaned1-self._labels1, 2), 1)
+    return tf.reduce_sum(x, 2), 1)
 
 cost1 = tf.reduce_mean(calc_pow(x_out1 - x_trg1) + calc_pow(x_out2 - x_trg2), 1)
 cost2 = tf.reduce_mean(calc_pow(x_out1 - x_trg2) + calc_pow(x_out2 - x_trg1), 1)
