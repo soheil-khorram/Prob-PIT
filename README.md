@@ -1,6 +1,6 @@
 .. -*- mode: rst -*-
 
-Prob-PIT
+Probabilistic Permutation Invariant Training (Prob-PIT)
 ========
 
 This repository explains a TensorFlow implementation of the probabilistic permutation invariant training (Prob-PIT) [1] which improves and extends the conventional PIT [2] for DNN-based speech separation systems. The details of the Prob-PIT technique are presented in the paper [1].
@@ -29,6 +29,7 @@ Prob-PIT
 --------
 
 Prob-PIT uses the soft (regularized) minimum function to calculate the optimization loss. Following equation expresses the soft minimum for two variables X1 and X2: 
+
 .. code-block:: python
 
     soft_min(X1, X2) = - gamma * log( exp(-X1/gamma) + exp(-X2/gamma) )
