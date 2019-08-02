@@ -3,9 +3,7 @@
 Prob-PIT
 ========
 
-This repository explains a TensorFlow implementation of the probabilistic permutation invariant training (Prob-PIT) which improves and extends the conventional PIT for DNN-based speech separation systems. The details of the Prob-PIT technique are presented in the following paper:
-
-Yousefi M., Khorram S., Hansen J., "Probabilistic Permutation Invariant Training for Speech Separation", Interspeech, 2019.
+This repository explains a TensorFlow implementation of the probabilistic permutation invariant training (Prob-PIT) [1] which improves and extends the conventional PIT [2] for DNN-based speech separation systems. The details of the Prob-PIT technique are presented in the paper [1].
 
 Conventional PIT
 ----------------
@@ -68,6 +66,10 @@ References
 .. [1] Midia Yousefi, Soheil Khorram, John H.L. Hansen,
        *"Probabilistic Permutation Invariant Training for Speech Separation"*,
        Interspeech, 2019.
+
+.. [2] Morten Kolbæk, Dong Yu, Zheng-Hua Tan and Jesper Jensen
+       *"Multitalker speech separation with utterance-level permutation invariant training of deep recurrent neural networks."*
+       IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP), 2017.
 
 Author
 ------
