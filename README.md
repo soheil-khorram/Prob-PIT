@@ -25,19 +25,19 @@ In this code snippet, cost1 and cost2 are the costs of two possible permutations
 
 # Prob-PIT
 
-Prob-PIT uses the soft (regularized) minimum function to calculate the optimization loss. Following equation expresses the soft minimum for three variables X1 and X2: 
+Prob-PIT uses the soft (regularized) minimum function to calculate the optimization loss. Following equation expresses the soft minimum for two variables X1 and X2: 
 ```python
-    soft_min(X1, X2) = gamma * log( exp(-X1/gamma) + exp(-X2/gamma) )
+    soft_min(X1, X2) = - gamma * log( exp(-X1/gamma) + exp(-X2/gamma) )
 ```
 where gamma is a smoothing factor. gamma = 0 reduces the soft-min function to the standard min function. 
 
-Note that To ensure numerical stability of the soft-min function, we always employ the log-sum-exp stabilization trick: 
+Note that to ensure numerical stability of the soft-min function, we always employ the log-sum-exp stabilization trick: 
 ```python
     Xmin = min(X1, X2)
     Xmax = max(x1, x2)
     soft_min(X1, X2) = Xmin - gamma * log( 1 + exp((Xmin - Xmax)/gamma) )
 ```
-Which is completely equivalent to the previous definition of the soft-min function. Considering to the above explanation, tensorflow implementation of the Prob-PIT will be:
+Which is completely equivalent to the previous definition of the soft-min function. Considering to the above equations, tensorflow implementation of the Prob-PIT will be:
 
 ```python
 import tensorflow as tf
@@ -52,9 +52,5 @@ min_cost = idx * cost2 + (1 - idx) * cost1
 max_cost = (1 - idx) * cost2 + idx * cost1
 smooth_cost = min_cost - gamma * tf.log(tf.exp((min_cost - max_cost) / gamma) + 1)
 prob_pit_loss = tf.reduce_sum(smooth_cost)
-pit_loss = tf.reduce_sum(min_cost)
 ```
-
-
-
 
