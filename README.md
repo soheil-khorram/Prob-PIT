@@ -3,6 +3,8 @@
 Probabilistic Permutation Invariant Training (Prob-PIT)
 ========
 
+.. image:: logo.png
+
 This repository explains a TensorFlow implementation of the probabilistic permutation invariant training (Prob-PIT) [1] which improves and extends the conventional PIT [2] for DNN-based speech separation systems. The details of the Prob-PIT technique are presented in the paper [1].
 
 Conventional PIT
