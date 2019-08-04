@@ -68,7 +68,7 @@ References
 
 .. [1] Midia Yousefi, Soheil Khorram, John H.L. Hansen,
        *"Probabilistic Permutation Invariant Training for Speech Separation"*,
-       Interspeech, 2019.
+       Interspeech, 2019. [`PDF <prob-pit-paper.pdf>`_]
 
 .. [2] Morten Kolbæk, Dong Yu, Zheng-Hua Tan and Jesper Jensen
        *"Multitalker speech separation with utterance-level permutation invariant training of deep recurrent neural networks."*
